@@ -49,10 +49,11 @@ angular
         headers: {
           "Accept": "application/json",
           "Content-Type": "application/json",
-          "Authorization": $`Bearer {token}`
+          "Authorization": `Bearer ${token}`
         }
       }).then(resp => {
         console.log(resp);
+        $scope.Contacts = resp.data;
 
       })
     }

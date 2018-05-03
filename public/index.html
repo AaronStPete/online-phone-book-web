@@ -16,7 +16,7 @@
       <section ng-show="loggedIn">
         <button ng-click="getContacts()">Get Contacts</button>
         <ul>
-          <li ng-repeat="contact in Contacts track by $Index"></li>
+          <li ng-repeat="contact in Contacts track by $index">{{contact.name}} phone: {{contact.phoneNumber}} email: {{contact.email}} address: {{contact.address}} preferred contact method: {{contact.preferredMethod}}</li>
         </ul>
       </section>
 
@@ -24,7 +24,7 @@
 
     </div>
     
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
     <script src="./main.js" charset="utf-8"></script>
   </body>
 </html>
