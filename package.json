@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "deploy": "surge ./public --domain online-phone-book-web.awasserman.surge.sh",
-    "start": "browser-sync start --server 'public' --files 'public'"
+    "start": "browser-sync start --server --startPath public --files public"
   },
   "dependencies": {
     "browser-sync": "^2.24.2",

@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Online Phone Book Web</title>
-    <link rel="stylesheet" href="/screen.css">
+    <link rel="stylesheet" href="./screen.css">
   </head>
   <body>
-    <h1>Hello, World!</h1>
-    <script src="/main.js" charset="utf-8"></script>
+    <div ng-app="main" ng-controller="mainController">
+      <form ng-submit="login()" ng-hide="loggedIn">
+        <input type="text" ng-model="username">
+        <input type="text" ng-model="password">
+        <button>Login</button>
+      </form>
+      <section ng-show="loggedIn">
+        <button ng-click="getContacts()">Get Contacts</button>
+        <ul>
+          <li ng-repeat="contact in Contacts track by $Index"></li>
+        </ul>
+      </section>
+
+
+
+    </div>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="./main.js" charset="utf-8"></script>
   </body>
 </html>
