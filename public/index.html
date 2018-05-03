@@ -15,8 +15,8 @@
       </form>
       <section ng-show="loggedIn">
         <button ng-click="getContacts()">Get Contacts</button>
-        <ul>
-          <li ng-repeat="contact in Contacts track by $index">{{contact.name}} phone: {{contact.phoneNumber}} email: {{contact.email}} address: {{contact.address}} preferred contact method: {{contact.preferredMethod}}</li>
+        <ul class="list-group">
+          <li class="list-group-item bg-info" ng-repeat="contact in Contacts track by $index">{{contact.name}} phone: {{contact.phoneNumber}} email: {{contact.email}} address: {{contact.address}} preferred contact method: {{contact.preferredMethod}}</li>
         </ul>
       </section>
 
@@ -28,3 +28,5 @@
     <script src="./main.js" charset="utf-8"></script>
   </body>
 </html>
+
+
